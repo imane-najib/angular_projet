@@ -1,12 +1,17 @@
 import { Component, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterLink,
+    RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
+  standalone : true
+
 })
 export class App {
   protected readonly title = signal('enset-app');
+  email : string ="Imane@gmail.com"
 }
